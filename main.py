@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 import board
 import board_list
@@ -14,6 +15,8 @@ api_router.include_router(board_list.router, tags=["board_lists"])
 api_router.include_router(board_task.router, tags=["board_tasks"])
 
 app.include_router(api_router, prefix='/api')
+
+app.mount("/", StaticFiles(directory="static", html=True), name="static")
 
 app.add_middleware(
     CORSMiddleware,
