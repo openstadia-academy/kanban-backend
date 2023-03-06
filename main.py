@@ -10,9 +10,9 @@ import board_task
 app = FastAPI()
 
 api_router = APIRouter()
-api_router.include_router(board.router, tags=["boards"])
-api_router.include_router(board_list.router, tags=["board_lists"])
-api_router.include_router(board_task.router, tags=["board_tasks"])
+api_router.include_router(board.router, tags=["Boards"])
+api_router.include_router(board_list.router, tags=["Board Lists"])
+api_router.include_router(board_task.router, tags=["board Tasks"])
 
 app.include_router(api_router, prefix='/api')
 
