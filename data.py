@@ -14,11 +14,13 @@ board_lists = {
         'id': 'list_1',
         'title': 'List 1',
         'board_id': 'board_1',
+        'index': 0
     },
     'list_2': {
         'id': 'list_2',
         'title': 'List 2',
         'board_id': 'board_1',
+        'index': 1
     }
 }
 

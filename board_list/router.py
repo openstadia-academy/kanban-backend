@@ -2,7 +2,7 @@ from typing import List
 
 from fastapi import APIRouter, HTTPException
 
-from .models import BoardList, BoardListCreate
+from .schemas import BoardList, BoardListCreate
 from .service import board_list_service
 
 router = APIRouter()

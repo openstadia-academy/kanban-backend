@@ -4,7 +4,7 @@ from uuid import uuid4
 from pydantic import parse_obj_as
 
 from data import board_tasks
-from .models import BoardTask, BoardTaskCreate
+from .schemas import BoardTask, BoardTaskCreate
 
 
 class BoardTaskService:

@@ -2,7 +2,7 @@ from typing import List
 
 from fastapi import APIRouter, HTTPException
 
-from .models import BoardTask, BoardTaskCreate
+from .schemas import BoardTask, BoardTaskCreate
 from .service import board_task_service
 
 router = APIRouter()

@@ -4,7 +4,7 @@ from uuid import uuid4
 from pydantic import parse_obj_as
 
 from data import board_lists
-from .models import BoardListCreate, BoardList
+from .schemas import BoardListCreate, BoardList
 
 
 class BoardListService:
@@ -25,8 +25,7 @@ class BoardListService:
 
         list_ = BoardList(
             id=id_,
-            board_id=list_in.board_id,
-            title=list_in.title,
+            **list_in.dict()
         )
 
         self.lists[id_] = list_
